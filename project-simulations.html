@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Computational Physics Simulations — Oliver Weedon</title>
+<meta name="description" content="Physics simulations written in Python exploring projectile motion and orbital mechanics.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=JetBrains+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="ruler-nav">
+  <div class="wrap">
+    <a href="index.html#top" class="ruler-mark"><span>OLIVER WEEDON</span></a>
+    <ul class="ruler-links">
+      <li><a href="index.html#about"><small>01</small><span class="label">About</span></a></li>
+      <li><a href="index.html#projects"><small>02</small><span class="label">Projects</span></a></li>
+      <li><a href="index.html#skills"><small>03</small><span class="label">Skills</span></a></li>
+      <li><a href="index.html#contact"><small>04</small><span class="label">Contact</span></a></li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+  <div class="wrap">
+    <nav class="crumb" aria-label="Breadcrumb">
+      <a href="index.html#projects">Projects</a><span class="sep">/</span><span class="current">Sheet 02.3</span>
+    </nav>
+  </div>
+
+  <header class="wrap page-hero">
+    <div class="page-hero-top">
+      <div>
+        <span class="eyebrow">Sheet 02.3 — Python &amp; Modelling</span>
+        <h1>Computational Physics Simulations</h1>
+        <p class="tagline">A set of simulations written in Python, exploring how far you can predict real-world motion with code before you ever build the hardware — a projectile motion simulator, and an orbital mechanics simulator in progress.</p>
+      </div>
+      <span class="sheet-tag code">Software</span>
+    </div>
+    <div class="page-meta-row">
+      <div class="cell"><span class="k">Role</span><span class="v">Sole developer</span></div>
+      <div class="cell"><span class="k">Tools</span><span class="v">Python, Matplotlib, NumPy</span></div>
+      <div class="cell"><span class="k">Duration</span><span class="v">[Add timeframe]</span></div>
+      <div class="cell"><span class="k">Status</span><span class="v">Projectile sim complete · Orbital sim in progress</span></div>
+    </div>
+  </header>
+
+  <section class="wrap detail-section">
+    <div class="dim-divider"><span class="num">a</span><span class="label">Overview</span><span class="line"></span></div>
+    <div class="prose">
+      <p>Building physical test rigs is one way to close the loop between theory and reality; writing a simulation is the other. This project is about testing how well numerical models predict motion I could otherwise measure directly.</p>
+      <p>[Add 2–3 sentences on why you started with projectile motion and moved to orbital mechanics — what question you were trying to answer, or what curiosity led you there.]</p>
+    </div>
+  </section>
+
+  <section class="wrap detail-section">
+    <div class="dim-divider"><span class="num">b</span><span class="label">Projectile Motion Simulator</span><span class="line"></span></div>
+    <div class="prose">
+      <p>[Describe the physics you modelled — launch angle, initial velocity, gravity, and whether you included air resistance/drag. Explain your numerical integration approach, e.g. Euler integration vs. a higher-order method, and why you chose it. Mention what the Matplotlib output shows and what you validated it against — analytical solutions, real measured throws, etc.]</p>
+      <ul>
+        <li>[Integration method used, e.g. Euler / RK4, and timestep chosen]</li>
+        <li>[Forces modelled: gravity only, or gravity + drag]</li>
+        <li>[How you validated results against known analytical solutions]</li>
+      </ul>
+    </div>
+    <div class="gallery-grid">
+      <div class="figure-placeholder"><span class="txt">[ Projectile trajectory plot, with/without drag ]</span></div>
+      <div class="figure-placeholder"><span class="txt">[ Code snippet / terminal output ]</span></div>
+    </div>
+  </section>
+
+  <section class="wrap detail-section">
+    <div class="dim-divider"><span class="num">c</span><span class="label">Orbital Mechanics Simulator</span><span class="line"></span></div>
+    <div class="prose">
+      <p>[Describe the current state of the orbital simulator: how many bodies it models, whether it's an n-body simulation or a simplified two-body/Keplerian model, what numerical method is being used to propagate positions over time, and what's still left to build — e.g. more bodies, better visualisation, energy conservation checks.]</p>
+    </div>
+    <div class="gallery-grid">
+      <div class="figure-placeholder"><span class="txt">[ Orbital simulator preview / in-progress plot ]</span></div>
+    </div>
+  </section>
+
+  <section class="wrap detail-section">
+    <div class="dim-divider"><span class="num">d</span><span class="label">Reflection</span><span class="line"></span></div>
+    <div class="prose">
+      <p>[What did writing these simulations teach you that building physical rigs didn't — or vice versa? Where did the simulation disagree with reality, and what did that reveal about the assumptions in the model?]</p>
+    </div>
+  </section>
+
+  <section class="wrap detail-section">
+    <div class="dim-divider"><span class="num">e</span><span class="label">Specification</span><span class="line"></span></div>
+    <table class="specs-table">
+      <thead><tr><th>Parameter</th><th>Value</th></tr></thead>
+      <tbody>
+        <tr><td class="k">Language</td><td>Python</td></tr>
+        <tr><td class="k">Libraries</td><td>Matplotlib, NumPy</td></tr>
+        <tr><td class="k">Integration method</td><td>[Add]</td></tr>
+        <tr><td class="k">Bodies modelled (orbital sim)</td><td>[Add]</td></tr>
+        <tr><td class="k">Validation approach</td><td>[Add]</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="wrap detail-section">
+    <div class="dim-divider"><span class="num">f</span><span class="label">Downloads</span><span class="line"></span></div>
+    <div class="downloads-row">
+      <a href="#">GitHub Repo ↗</a>
+    </div>
+  </section>
+
+  <nav class="wrap project-pager" aria-label="Project navigation">
+    <a href="project-thrust-stand.html" class="prev">
+      <span class="dir">← Previous sheet</span>
+      <span class="title">Thrust Test Stand</span>
+    </a>
+    <a href="index.html#projects" class="next">
+      <span class="dir">Back to →</span>
+      <span class="title">All Projects</span>
+    </a>
+  </nav>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Your Name — Built &amp; hosted on GitHub Pages</span>
+    <span>Sheet 02.3 · Rev A</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

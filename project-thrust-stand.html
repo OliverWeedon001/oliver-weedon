@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thrust Test Stand — Oliver Weedon</title>
+<meta name="description" content="A test rig for measuring real thrust output from small motors, built around an Arduino, a load cell, and 3D-printed mounts.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=JetBrains+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="ruler-nav">
+  <div class="wrap">
+    <a href="index.html#top" class="ruler-mark"><span>OLIVER WEEDON</span></a>
+    <ul class="ruler-links">
+      <li><a href="index.html#about"><small>01</small><span class="label">About</span></a></li>
+      <li><a href="index.html#projects"><small>02</small><span class="label">Projects</span></a></li>
+      <li><a href="index.html#skills"><small>03</small><span class="label">Skills</span></a></li>
+      <li><a href="index.html#contact"><small>04</small><span class="label">Contact</span></a></li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+  <div class="wrap">
+    <nav class="crumb" aria-label="Breadcrumb">
+      <a href="index.html#projects">Projects</a><span class="sep">/</span><span class="current">Sheet 02.2</span>
+    </nav>
+  </div>
+
+  <header class="wrap page-hero">
+    <div class="page-hero-top">
+      <div>
+        <span class="eyebrow">Sheet 02.2 — Electronics &amp; Test</span>
+        <h1>Propeller &amp; Rocket Motor Thrust Test Stand</h1>
+        <p class="tagline">A rig for measuring real thrust output from small motors, built around an Arduino, a load cell, and a set of 3D-printed mounts — with a second variant adapted to log small rocket motor burns.</p>
+      </div>
+      <span class="sheet-tag build">Hardware + Data</span>
+    </div>
+    <div class="page-meta-row">
+      <div class="cell"><span class="k">Role</span><span class="v">Mechanical design, electronics, firmware, analysis</span></div>
+      <div class="cell"><span class="k">Tools</span><span class="v">Arduino, load cell + amplifier, brushless motor/ESC</span></div>
+      <div class="cell"><span class="k">Duration</span><span class="v">[Add timeframe]</span></div>
+      <div class="cell"><span class="k">Status</span><span class="v">Complete, two variants</span></div>
+    </div>
+  </header>
+
+  <section class="wrap detail-section">
+    <div class="dim-divider"><span class="num">a</span><span class="label">Overview</span><span class="line"></span></div>
+    <div class="prose">
+      <p>Motor datasheets give you a number; a test stand tells you the truth. The goal here was to build a rig rigid and sensitive enough to capture real thrust curves from small motors, rather than relying on manufacturer claims.</p>
+      <p>[Add 2–3 sentences on what prompted this project — a model aircraft or rocketry hobby, curiosity about ESC behaviour, wanting real data to compare motor options?]</p>
+    </div>
+  </section>
+
+  <section class="wrap detail-section">
+    <div class="dim-divider"><span class="num">b</span><span class="label">Mechanical Design</span><span class="line"></span></div>
+    <div class="prose">
+      <p>The stand mounts the motor rigidly against a load cell so that thrust is transferred cleanly into the sensor rather than dissipated through flex in the mount. [Describe the mount geometry, how you constrained the motor to load only the sensitive axis of the load cell, and any 3D-printed jig design decisions — bolt patterns, motor mount standard, alignment features.]</p>
+    </div>
+  </section>
+
+  <section class="wrap detail-section">
+    <div class="dim-divider"><span class="num">c</span><span class="label">Electronics &amp; Firmware</span><span class="line"></span></div>
+    <div class="prose">
+      <p>[Describe the electronics chain: which load cell and amplifier (e.g. HX711), how you wired it to the Arduino, and how the firmware samples and streams data. Cover your calibration procedure — known reference weights, how you derived the counts-to-grams/Newtons conversion — and how you handled noise or vibration in the signal, e.g. software filtering or mechanical damping.]</p>
+      <ul>
+        <li>[Sample rate achieved and why that mattered for capturing the burn profile]</li>
+        <li>[Calibration method and accuracy achieved]</li>
+        <li>[Any filtering/smoothing applied to the raw signal]</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="wrap detail-section">
+    <div class="dim-divider"><span class="num">d</span><span class="label">Results</span><span class="line"></span></div>
+    <div class="prose">
+      <p>Results were plotted as thrust-vs-time curves for both the propeller and rocket motor configurations. [Summarise what the curves showed — peak thrust, burn duration, how repeatable results were across runs, and how they compared with manufacturer specs if you had any to check against.]</p>
+    </div>
+    <div class="gallery-grid">
+      <div class="figure-placeholder"><span class="txt">[ Propeller motor thrust-vs-time graph ]</span></div>
+      <div class="figure-placeholder"><span class="txt">[ Rocket motor thrust-vs-time graph ]</span></div>
+      <div class="figure-placeholder"><span class="txt">[ Rig photo, propeller variant ]</span></div>
+      <div class="figure-placeholder"><span class="txt">[ Rig photo, rocket motor variant ]</span></div>
+    </div>
+  </section>
+
+  <section class="wrap detail-section">
+    <div class="dim-divider"><span class="num">e</span><span class="label">Reflection</span><span class="line"></span></div>
+    <div class="prose">
+      <p>[What was the hardest engineering problem here — signal noise, mechanical rigidity, safety around the rocket motor variant? What would the next revision of the stand fix?]</p>
+    </div>
+  </section>
+
+  <section class="wrap detail-section">
+    <div class="dim-divider"><span class="num">f</span><span class="label">Specification</span><span class="line"></span></div>
+    <table class="specs-table">
+      <thead><tr><th>Parameter</th><th>Value</th></tr></thead>
+      <tbody>
+        <tr><td class="k">Load cell range</td><td>[Add]</td></tr>
+        <tr><td class="k">Amplifier</td><td>[e.g. HX711]</td></tr>
+        <tr><td class="k">Sample rate</td><td>[Add]</td></tr>
+        <tr><td class="k">Peak thrust recorded</td><td>[Add]</td></tr>
+        <tr><td class="k">Measurement accuracy</td><td>[Add]</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="wrap detail-section">
+    <div class="dim-divider"><span class="num">g</span><span class="label">Downloads</span><span class="line"></span></div>
+    <div class="downloads-row">
+      <a href="#">Test Data ↗</a>
+      <a href="#">Source Code ↗</a>
+      <a href="#">Rig Photos ↗</a>
+    </div>
+  </section>
+
+  <nav class="wrap project-pager" aria-label="Project navigation">
+    <a href="project-clock.html" class="prev">
+      <span class="dir">← Previous sheet</span>
+      <span class="title">Mechanical Clock</span>
+    </a>
+    <a href="project-simulations.html" class="next">
+      <span class="dir">Next sheet →</span>
+      <span class="title">Physics Simulations</span>
+    </a>
+  </nav>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Your Name — Built &amp; hosted on GitHub Pages</span>
+    <span>Sheet 02.2 · Rev A</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
