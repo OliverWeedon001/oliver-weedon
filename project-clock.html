@@ -33,62 +33,54 @@
   <header class="wrap page-hero">
     <div class="page-hero-top">
       <div>
-        <span class="eyebrow">Sheet 02.1 — CAD &amp; Manufacturing</span>
+        <span class="eyebrow">Sheet 02.3 — CAD &amp; Manufacturing</span>
         <h1>3D-Printed Mechanical Clock</h1>
-        <p class="tagline">A fully working mechanical clock, designed from scratch in CAD and manufactured entirely on a home 3D printer — every gear, escapement part, and housing component modelled before it was ever printed.</p>
+        <p class="tagline">I am working on a fully working mechanical clock, designed from scratch in CAD and manufactured entirely on a home 3D printer — every gear, escapement part, and housing component will be modelled and manufactured by me.</p>
       </div>
       <span class="sheet-tag build">Hardware Build</span>
     </div>
     <div class="page-meta-row">
       <div class="cell"><span class="k">Role</span><span class="v">Design, CAD, manufacture, assembly</span></div>
-      <div class="cell"><span class="k">Tools</span><span class="v">[Fusion 360 / SolidWorks], FDM printer</span></div>
-      <div class="cell"><span class="k">Duration</span><span class="v">[Add timeframe]</span></div>
-      <div class="cell"><span class="k">Status</span><span class="v">Complete</span></div>
+      <div class="cell"><span class="k">Tools</span><span class="v">Onshape, FDM printer</span></div>
+      <div class="cell"><span class="k">Duration</span><span class="v">Pending</span></div>
+      <div class="cell"><span class="k">Status</span><span class="v">In progress</span></div>
     </div>
   </header>
 
   <section class="wrap detail-section">
     <div class="dim-divider"><span class="num">a</span><span class="label">Overview</span><span class="line"></span></div>
     <div class="prose">
-      <p>The goal was to see how far a fully mechanical timekeeping device could be taken using nothing but a home FDM printer — no off-the-shelf clock movement, no bought gears. Every part that moves, from the mainspring drum down to the escapement wheel, was modelled from first principles.</p>
-      <p>[Add 2–3 sentences on what drew you to this project specifically — was it a fascination with horology, a challenge from a teacher, curiosity about mechanisms in general? Admissions readers respond well to the "why" behind a build like this.]</p>
+      <p>I have always been fascinated with horology and have wanted to take on a project like this for a long time. I had previously deconstruceted an antique clock which taught me a lot about how clocks work but left much to be discovered about the manufacturing and design process. The problem is that to manufacture the tiny and precise components found in watches requires specialist machine tools that I don’t have access to. I recently saw a video by the youtuber Engineerzy where he made a 3d printed mechanical clock. This inspired me to try the same as I thought it would deepen my understanding of how clocks work.</p>
     </div>
   </section>
 
   <section class="wrap detail-section">
     <div class="dim-divider"><span class="num">b</span><span class="label">Design &amp; CAD</span><span class="line"></span></div>
     <div class="prose">
-      <p>[Describe your design process here: how you worked out the gear train ratios to get an accurate hour/minute relationship, how you chose tooth counts and module/pitch, and how you modelled the escapement geometry. If you iterated through multiple versions in CAD before settling on a working design, mention what changed between them and why.]</p>
-      <ul>
-        <li>[Gear train: number of stages, ratio, and how you verified it mathematically before printing]</li>
-        <li>[Escapement type used — e.g. anchor escapement — and why]</li>
-        <li>[Any load-bearing or friction considerations, e.g. bushings, shaft diameters, bearing surfaces]</li>
-      </ul>
+        <p>I initially design parts by masking rough sketches in my notebook. I then use Onshape to create precise  CAD models for the components. Designing a functional escapement mechanism has been challenging as the geometry needs to be very precise and 3d printers don’t have very good tolerance. Aided by an old paper by Mark V Headrick I was able to design a deadbeat escapement mechanism which worked very well when simulated in cad but failed when 3D printed. This is because the small, sharp teeth were difficult to manufacture on the 3D printer. Even after extensively tuning the 3D printer and slicer software the teeth still came out misshapen. In the end I increased the size of the escapement to minimise the effects of inaccuracies.</p>
     </div>
   </section>
 
   <section class="wrap detail-section">
     <div class="dim-divider"><span class="num">c</span><span class="label">Manufacturing &amp; Tolerancing</span><span class="line"></span></div>
     <div class="prose">
-      <p>Printed mechanisms live or die on tolerance. [Describe the specific print settings and tolerancing approach you used — layer height, infill, how much clearance you left between mating gear teeth and shafts, and how many print/test/refine cycles it took to get moving parts that didn't bind or slip.]</p>
-      <p>[Note the trickiest part here — e.g. getting backlash low enough without the gears jamming, or print warping affecting a large flat housing part.]</p>
+      <p>Whilst 3D printers are great for fast prototyping one limitation that I have had to take into account is that 3d printers are far less precise than other manufacturing methods such as cnc lathes. Initially I wanted to make the clock fully 3D printed however I quickly realised that the gear axles would not be accurate enough and would have very high friction. As a result I am now using small bearings and M4 blots to make the axles. </p>
     </div>
   </section>
 
   <section class="wrap detail-section">
     <div class="dim-divider"><span class="num">d</span><span class="label">Gallery</span><span class="line"></span></div>
     <div class="gallery-grid">
-      <div class="figure-placeholder"><span class="txt">[ Finished clock, front view ]</span></div>
-      <div class="figure-placeholder"><span class="txt">[ Gear train close-up ]</span></div>
-      <div class="figure-placeholder"><span class="txt">[ CAD exploded view ]</span></div>
-      <div class="figure-placeholder"><span class="txt">[ Escapement in motion / video still ]</span></div>
+        <div class="figure-placeholder"><span class="txt"><img src="brass_clock.jpg" height="500"><p>The antique clock I disassembled</p></span></div>
+        <div class="figure-placeholder"><span class="txt"><img src="cad.jpg" height="500"><p>A Cad assembly of the escapment mechanism</p></span></div>
+        <div class="figure-placeholder"><span class="txt"><img src="insp.jpg" height="500"><p>The inspiration for this project</p></span></div>
     </div>
   </section>
 
   <section class="wrap detail-section">
     <div class="dim-divider"><span class="num">e</span><span class="label">Reflection</span><span class="line"></span></div>
     <div class="prose">
-      <p>[What would you do differently with a second version? What did this project teach you about the gap between a CAD model and a physical, working mechanism? This is a good place for genuine, specific reflection rather than a generic "I learned a lot."]</p>
+      <p>So far I have learnt that really tuning your manufacturing method is critical. The precise tolerances needed for this project could have only been achived through carefuly tweaking the 3D printer and splicer settings. I think the precision required will reduce slightly from here however there is the new challenge of overcrowding and intergrating all the different mechanisms in one compact package.</p>
     </div>
   </section>
 
@@ -97,23 +89,15 @@
     <table class="specs-table">
       <thead><tr><th>Parameter</th><th>Value</th></tr></thead>
       <tbody>
-        <tr><td class="k">Gear train stages</td><td>[Add]</td></tr>
-        <tr><td class="k">Escapement type</td><td>[Add]</td></tr>
-        <tr><td class="k">Material</td><td>[e.g. PLA / PETG]</td></tr>
-        <tr><td class="k">Print time</td><td>[Add]</td></tr>
-        <tr><td class="k">Timekeeping accuracy</td><td>[Add, e.g. ± seconds/day if measured]</td></tr>
+        <tr><td class="k">Gear train stages</td><td>N/A</td></tr>
+        <tr><td class="k">Escapement type</td><td>Deadbeat</td></tr>
+        <tr><td class="k">Material</td><td>PLA+</td></tr>
+        <tr><td class="k">Print time</td><td>Pending</td></tr>
+        <tr><td class="k">Timekeeping accuracy</td><td>Pending</td></tr>
       </tbody>
     </table>
   </section>
 
-  <section class="wrap detail-section">
-    <div class="dim-divider"><span class="num">g</span><span class="label">Downloads</span><span class="line"></span></div>
-    <div class="downloads-row">
-      <a href="#">CAD Files ↗</a>
-      <a href="#">Build Photos ↗</a>
-      <a href="#">Bill of Materials ↗</a>
-    </div>
-  </section>
 
   <nav class="wrap project-pager" aria-label="Project navigation">
     <a href="index.html#projects" class="prev">

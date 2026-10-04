@@ -50,41 +50,40 @@
   <section class="wrap detail-section">
     <div class="dim-divider"><span class="num">a</span><span class="label">Overview</span><span class="line"></span></div>
     <div class="prose">
-      <p>Building physical test rigs is one way to close the loop between theory and reality; writing a simulation is the other. This project is about testing how well numerical models predict motion I could otherwise measure directly.</p>
-      <p>[Add 2–3 sentences on why you started with projectile motion and moved to orbital mechanics — what question you were trying to answer, or what curiosity led you there.]</p>
+        <p>After learning suvat equations in maths I was curious to see how accurately numerical models can predict the world around us. As a result I programmed 2 physics simulations that I could test with real world data.</p>
     </div>
   </section>
 
   <section class="wrap detail-section">
     <div class="dim-divider"><span class="num">b</span><span class="label">Projectile Motion Simulator</span><span class="line"></span></div>
     <div class="prose">
-      <p>[Describe the physics you modelled — launch angle, initial velocity, gravity, and whether you included air resistance/drag. Explain your numerical integration approach, e.g. Euler integration vs. a higher-order method, and why you chose it. Mention what the Matplotlib output shows and what you validated it against — analytical solutions, real measured throws, etc.]</p>
+        <p>I first programmed the projectile simulations. At the start it just plugged the information you gave it into the appropriate SUVAT equation. I then rewrote it to use numerical integration so that it actually simulated the motion. I experimented with different time steps and found that 0.01 seconds was a good balance between time to simulate and accuracy. After using numerical integration it was quite simple to graph the projectile using matplotlib and to account for drag between each time step. For small, slow simple objects the model was very accurate, however when I tested the model using my golf toptracer data it was wildly inaccurate. This is because it didn’t account for the magnus effect.</p>
       <ul>
-        <li>[Integration method used, e.g. Euler / RK4, and timestep chosen]</li>
-        <li>[Forces modelled: gravity only, or gravity + drag]</li>
-        <li>[How you validated results against known analytical solutions]</li>
+          <li>You can see in the graphs below the differance air resistance makes. (Both simulations had the same starting position and velocity. The drag cofficent and area were chosen arbitrarily but are somewhat realistic values for everyday situations.)</li>
       </ul>
     </div>
-    <div class="gallery-grid">
-      <div class="figure-placeholder"><span class="txt">[ Projectile trajectory plot, with/without drag ]</span></div>
-      <div class="figure-placeholder"><span class="txt">[ Code snippet / terminal output ]</span></div>
-    </div>
+        
+      <div class="figure-placeholder"><span class="txt">
+            <img src="no_drag.png" width="500"> <img src="drag.png" width="500">
+      </span></div>
   </section>
 
   <section class="wrap detail-section">
     <div class="dim-divider"><span class="num">c</span><span class="label">Orbital Mechanics Simulator</span><span class="line"></span></div>
     <div class="prose">
-      <p>[Describe the current state of the orbital simulator: how many bodies it models, whether it's an n-body simulation or a simplified two-body/Keplerian model, what numerical method is being used to propagate positions over time, and what's still left to build — e.g. more bodies, better visualisation, energy conservation checks.]</p>
+        <p>For the orbital mechanics simulator, I started with Euler's method for numerical integration with the only force being gravity between bodies. I tested the accuracy of my model using real planetary position data from the Nasa planetary position calculator and found my model was only 4 degrees off after 5 years of simulation. Using RK4 would have been better as it is far more accurate than Euler’s, although it does require more processing.</p>
+        <ul>
+            <li>The two GIFs below were created using my simulation. The first is an experiment with non-circular orbits, it shows that a very precise initial velocity is required to create a stable orbit. The second simulation is a 160 year simulation that shows the orbit of neptune. I had to increase the time step from 1 hour to 1 day to reduce simulation time as I had estimated it would take 3 hours to simulate. It took 8 minutes with the new larger time step.</li>
+        </ul>
+
     </div>
-    <div class="gallery-grid">
-      <div class="figure-placeholder"><span class="txt">[ Orbital simulator preview / in-progress plot ]</span></div>
-    </div>
+      <div class="figure-placeholder"><span class="txt"><img src="non_circular.gif" width="500"> <img src="nept.gif" width="500"></span></div>
   </section>
 
   <section class="wrap detail-section">
     <div class="dim-divider"><span class="num">d</span><span class="label">Reflection</span><span class="line"></span></div>
     <div class="prose">
-      <p>[What did writing these simulations teach you that building physical rigs didn't — or vice versa? Where did the simulation disagree with reality, and what did that reveal about the assumptions in the model?]</p>
+        <p>During this process I learnt a lot about computational analysis which is a very useful skillset in modern engineering to help test and optimise systems. I am excited to explore the topic further in future and plan to make a full physics engine.</p>
     </div>
   </section>
 
@@ -95,9 +94,9 @@
       <tbody>
         <tr><td class="k">Language</td><td>Python</td></tr>
         <tr><td class="k">Libraries</td><td>Matplotlib, NumPy</td></tr>
-        <tr><td class="k">Integration method</td><td>[Add]</td></tr>
-        <tr><td class="k">Bodies modelled (orbital sim)</td><td>[Add]</td></tr>
-        <tr><td class="k">Validation approach</td><td>[Add]</td></tr>
+        <tr><td class="k">Integration method</td><td>Euler's method'</td></tr>
+        <tr><td class="k">Bodies modelled (orbital sim)</td><td>10</td></tr>
+        <tr><td class="k">Validation approach</td><td>NASA's plantary position calculator, Toptracer golf data</td></tr>
       </tbody>
     </table>
   </section>

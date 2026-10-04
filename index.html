@@ -32,7 +32,7 @@
         <div>
           <span class="eyebrow">Project Portfolio</span>
           <h1 class="tb-name">Oliver<br>Weedon</h1>
-          <p class="tb-tagline">Aspiring mechanical engineer who likes building things using CAD, 3D printing, embedded test rigs, and a bit of Python.</p>
+          <p class="tb-tagline">Aspiring mechanical engineer who likes building things using CAD, 3D printing, embedded test rigs, and Python.</p>
         </div>
         <span class="tb-status">Open to offers · 2026</span>
       </div>
@@ -46,7 +46,6 @@
     <div class="hero-links">
       <a href="#projects" class="btn primary">View Projects ↓</a>
       <a href="mailto:oliver.weedon1@icloud.com" class="btn">Email Me</a>
-      <a href="https://github.com/yourusername" class="btn">GitHub</a>
     </div>
   </header>
 
@@ -56,8 +55,8 @@
     <div class="about-grid reveal">
       <div class="about-text">
         <p>I'm a student with a habit of turning ideas into physical, testable things — then figuring out exactly how well they perform. My projects span three disciplines that all feed into mechanical engineering: mechanical design and manufacturing, embedded instrumentation, and computational modelling.</p>
-        <p>Whether it's designing a working clock mechanism entirely from first principles in CAD, building a thrust stand to put real numbers on a motor's performance, or writing a simulation to predict how a system behaves before I ever build it — I like closing the loop between design, build, and measurement.</p>
-        <p>This site collects the projects I'm proudest of. Replace this paragraph and the fields opposite with your own story — what got you into engineering, and what you're aiming at next.</p>
+        <p>Whether it's designing a working clock mechanism entirely from first principles in CAD, building a thrust stand to put real numbers on a propeller's performance, or writing a simulation to predict how a system behaves before — I like closing the loop between design, build, and measurement.</p>
+        <p>This site is a collection of the projects I'm proudest of.</p>
       </div>
       <div class="spec-list">
         <div class="row"><span class="k">Focus areas</span><span class="v">Design · Test · Simulation</span></div>
@@ -76,110 +75,114 @@
 
     <div class="projects-list">
 
-      <!-- Project 01: Mechanical Clock -->
-      <article class="sheet reveal">
-        <div class="sheet-corner" aria-hidden="true"></div>
-        <div class="sheet-head">
-          <div>
-            <h3><a href="project-clock.html" style="color:inherit; text-decoration:none;">3D-Printed Mechanical Clock</a></h3>
-            <span class="eyebrow">Sheet 02.1 — CAD &amp; Manufacturing</span>
-          </div>
-          <span class="sheet-tag build">Hardware Build</span>
-        </div>
-        <div class="sheet-body">
-          <p><strong>A fully working mechanical clock, designed from scratch in CAD and manufactured entirely on a home 3D printer.</strong> Every gear, escapement part, and housing component was modelled before being printed, test-fitted, and refined — with no off-the-shelf clock movement inside.</p>
-          <div class="sheet-meta">
-            <span><b>Role:</b> Design, CAD, manufacture, assembly</span>
-            <span><b>Tools:</b> [Fusion 360 / SolidWorks], FDM printer</span>
-            <span><b>Status:</b> Complete</span>
-          </div>
-          <p>[Add a sentence here on the trickiest part — e.g. getting the gear ratios right, tolerancing the escapement, or print tolerances for moving parts. Admissions readers love the specific problem you had to solve.]</p>
-          <div class="chip-row">
-            <span class="chip">Gear Trains</span>
-            <span class="chip">Escapement Design</span>
-            <span class="chip">Tolerancing</span>
-            <span class="chip">FDM Printing</span>
-          </div>
-          <div class="figure-placeholder">
-            <span class="txt">[ Photo of the finished clock ]<br>Replace with an image in /images and swap this block for an &lt;img&gt; tag</span>
-          </div>
-          <div class="sheet-links">
-            <a href="project-clock.html">Full Write-up ↗</a>
-          </div>
-        </div>
-      </article>
+        <!-- Project 01: Mechanical Clock -->
+        <article class="sheet reveal">
+            <div class="sheet-corner" aria-hidden="true"></div>
+            <div class="sheet-head">
+                <div>
+                    <h3><a href="project-simulations.html" style="color:inherit; text-decoration:none;">Computational Physics Simulations</a></h3>
+                    <span class="eyebrow">Sheet 02.1 — Python &amp; Modelling</span>
+                </div>
+                <span class="sheet-tag code">Software</span>
+            </div>
+            <div class="sheet-body">
+                <p><strong>I programed a set of physics simulations in python to see how accuratly you could predict real world results.</strong> The first is a projectile motion simulator built with Matplotlib; the second, is an orbital mechanics simulator that computes planetary positions over time.</p>
+                <div class="sheet-meta">
+                    <span><b>Role:</b> Sole developer</span>
+                    <span><b>Tools:</b> Python, Matplotlib, NumPy</span>
+                    <span><b>Status:</b> Projectile sim complete · Orbital complete</span>
+                </div>
+                <p>I used numeriacal intergration to simulate the movement of ther projectiles and planets. The projectile sim accounts for drag although could benifit by adding other forces such as the magnus effect.</p>
+                <div class="chip-row">
+                    <span class="chip">Python</span>
+                    <span class="chip">Matplotlib</span>
+                    <span class="chip">Numerical Methods</span>
+                    <span class="chip">Orbital Mechanics</span>
+                </div>
+                <div class="figure-placeholder">
+                    <img src="orbit_animation1.gif" width="500" height="500">
+                    <img src="Projectile.png" width="500" height="500">
+                </div>
+                <div class="sheet-links">
+                    <a href="project-simulations.html">Full Write-up ↗</a>
+                </div>
+            </div>
+        </article>
 
-      <!-- Project 02: Thrust Stand -->
-      <article class="sheet reveal">
-        <div class="sheet-corner" aria-hidden="true"></div>
-        <div class="sheet-head">
-          <div>
-            <h3><a href="project-thrust-stand.html" style="color:inherit; text-decoration:none;">Propeller &amp; Rocket Motor Thrust Test Stand</a></h3>
-            <span class="eyebrow">Sheet 02.2 — Electronics &amp; Test</span>
-          </div>
-          <span class="sheet-tag build">Hardware + Data</span>
-        </div>
-        <div class="sheet-body">
-            <p><strong>I built a test rig for measuring real thrust output from different style propellers using a small motor, a load cell and an Arduino to control everything.</strong> The base version tests brushless propeller motors; a second variant was adapted to test small rocket motors, logging thrust over the full burn, however I haven't tested it yet due to extreme weather and the risk of starting wild fires.</p>
-            <div class="sheet-meta">
-                <span><b>Role:</b> Mechanical design, electronics, firmware, data analysis</span>
-                <span><b>Tools:</b> Arduino, load cell + amplifier, brushless motor/ESC, 3D-printed jig</span>
-                <span><b>Status:</b> Complete, two variants</span>
+        <!-- Project 02: Thrust Stand -->
+        <article class="sheet reveal">
+            <div class="sheet-corner" aria-hidden="true"></div>
+            <div class="sheet-head">
+                <div>
+                    <h3><a href="project-thrust-stand.html" style="color:inherit; text-decoration:none;">Propeller &amp; Rocket Motor Thrust Test Stand</a></h3>
+                    <span class="eyebrow">Sheet 02.2 — Electronics &amp; Test</span>
+                </div>
+                <span class="sheet-tag build">Hardware + Data</span>
             </div>
-            <p>The stand mounts the motor rigidly against a load cell, with the Arduino sampling force in real time and streaming it out for logging. [Add: how you calibrated the load cell, sample rate, or how you handled vibration/noise in the signal.] Results were plotted as thrust-vs-time curves for both the propeller and rocket motor configurations.</p>
-            <div class="chip-row">
-                <span class="chip">Arduino</span>
-                <span class="chip">Load Cell Calibration</span>
-                <span class="chip">Brushless Motors</span>
-                <span class="chip">Data Logging</span>
-                <span class="chip">Rocket Motor Testing</span>
+            <div class="sheet-body">
+                <p><strong>I built a test rig for measuring real thrust output from different style propellers using a small motor, a load cell and an Arduino to control everything.</strong> The base version tests brushless propeller motors; a second variant was adapted to test small rocket motors, logging thrust over the full burn, however I haven't tested it yet due to extreme weather and the risk of starting wild fires.</p>
+                <div class="sheet-meta">
+                    <span><b>Role:</b> Mechanical design, electronics, firmware, data analysis</span>
+                    <span><b>Tools:</b> Arduino, load cell + amplifier, brushless motor/ESC, 3D-printed jig</span>
+                    <span><b>Status:</b> Complete, two variants</span>
+                </div>
+                <p>The stand mounts the motor rigidly against a load cell, with the Arduino sampling force in real time and streaming it out for logging. Results were plotted as thrust-vs-time curves for both the propeller and rocket motor configurations.</p>
+                <div class="chip-row">
+                    <span class="chip">Arduino</span>
+                    <span class="chip">Load Cell Calibration</span>
+                    <span class="chip">Brushless Motors</span>
+                    <span class="chip">Data Logging</span>
+                    <span class="chip">Rocket Motor Testing</span>
+                </div>
+                <div class="figure-placeholder">
+                    <img src="Motor.jpeg" width="450" height="400">
+                    <img src="chart (1).png" width="550" height="400">
+                </div>
+                <div class="sheet-links">
+                    <a href="project-thrust-stand.html">Full Write-up ↗</a>
+                </div>
             </div>
-            <div class="figure-placeholder">
-                <img src="Motor.jpeg" width="450" height="400">
-                <img src="chart (1).png" width="550" height="400">
-            </div>
-            <div class="sheet-links">
-                <a href="project-thrust-stand.html">Full Write-up ↗</a>
-            </div>
-        </div>
-      </article>
+        </article>
 
-      <!-- Project 03: Physics Simulations -->
-      <article class="sheet reveal">
-        <div class="sheet-corner" aria-hidden="true"></div>
-        <div class="sheet-head">
-          <div>
-            <h3><a href="project-simulations.html" style="color:inherit; text-decoration:none;">Computational Physics Simulations</a></h3>
-            <span class="eyebrow">Sheet 02.3 — Python &amp; Modelling</span>
-          </div>
-          <span class="sheet-tag code">Software</span>
-        </div>
-        <div class="sheet-body">
-          <p><strong>A set of physics simulations written in Python, exploring how far you can predict real-world motion with code before you ever build the hardware.</strong> The first is a projectile motion simulator built with Matplotlib; the second, currently in progress, is an orbital mechanics simulator that computes planetary positions over time.</p>
-          <div class="sheet-meta">
-            <span><b>Role:</b> Sole developer</span>
-            <span><b>Tools:</b> Python, Matplotlib, NumPy</span>
-            <span><b>Status:</b> Projectile sim complete · Orbital sim in progress</span>
-          </div>
-          <p>[Add a line on the physics/method — e.g. numerical integration approach, what forces or effects you modelled (drag? gravity wells? multiple bodies?), and what the orbital simulator still needs before it's finished.]</p>
-          <div class="chip-row">
-            <span class="chip">Python</span>
-            <span class="chip">Matplotlib</span>
-            <span class="chip">Numerical Methods</span>
-            <span class="chip">Orbital Mechanics</span>
-          </div>
-          <div class="figure-placeholder">
-              <img src="orbit_animation1.gif" width="500" height="500">
-              <img src="Projectile.png" width="500" height="500">
-          </div>
-          <div class="sheet-links">
-            <a href="project-simulations.html">Full Write-up ↗</a>
-          </div>
-        </div>
-      </article>
+        <!-- Project 03: Physics Simulations -->
+
+        <article class="sheet reveal">
+            <div class="sheet-corner" aria-hidden="true"></div>
+            <div class="sheet-head">
+                <div>
+                    <h3><a href="project-clock.html" style="color:inherit; text-decoration:none;">3D-Printed Mechanical Clock</a></h3>
+                    <span class="eyebrow">Sheet 02.3 — CAD &amp; Manufacturing</span>
+                </div>
+                <span class="sheet-tag build">Hardware Build</span>
+            </div>
+            <div class="sheet-body">
+                <p><strong>I am currently working on building a fully 3d printed mechanical clock that I design myself.</strong> I have currently only made the escapment mechanism and barrel. I still need to make the gear train, hands and dials.</p>
+                <div class="sheet-meta">
+                    <span><b>Role:</b> Design, CAD, manufacture, assembly</span>
+                    <span><b>Tools:</b> Onshape, FDM printer</span>
+                    <span><b>Status:</b> In progress</span>
+                </div>
+                <p>Getting the correct proportions for the escapment mechanism to run continuously was very challenging. I was able to find a paper by Mark Headrick about the optimal sizes and angles which helped greatly.</p>
+                <div class="chip-row">
+                    <span class="chip">Gear Trains</span>
+                    <span class="chip">Escapement Design</span>
+                    <span class="chip">Tolerancing</span>
+                    <span class="chip">FDM Printing</span>
+                </div>
+                <div class="figure-placeholder">
+                    <img src="IMG_1577.jpg" width="500" height="500">
+                    <img src="escapment.jpg"  height="500">
+                </div>
+                <div class="sheet-links">
+                    <a href="project-clock.html">Full Write-up ↗</a>
+                </div>
+            </div>
+        </article>
 
     </div>
   </section>
+
+
 
   <!-- ============================= MISC PROJECTS ============================= -->
   <section id="misc" class="wrap">
@@ -215,14 +218,13 @@
           <tr><th>No.</th><th>Item</th><th>Category</th><th>Notes</th></tr>
         </thead>
         <tbody>
-          <tr><td class="no">001</td><td>CAD Modelling</td><td class="cat-build">Mechanical</td><td>[Fusion 360 / SolidWorks / Onshape]</td></tr>
+          <tr><td class="no">001</td><td>CAD Modelling</td><td class="cat-build">Mechanical</td><td>Onshape</td></tr>
           <tr><td class="no">002</td><td>3D Printing (FDM)</td><td class="cat-build">Mechanical</td><td>Design for manufacture, tolerancing</td></tr>
-          <tr><td class="no">003</td><td>Mechanism Design</td><td class="cat-build">Mechanical</td><td>Gear trains, escapements</td></tr>
+          <tr><td class="no">003</td><td>Mechanism Design</td><td class="cat-build">Mechanical</td><td>Escapement mechanism</td></tr>
           <tr><td class="no">004</td><td>Arduino / Embedded C++</td><td class="cat-code">Electronics</td><td>Sensor sampling, data logging</td></tr>
-          <tr><td class="no">005</td><td>Load Cells &amp; Signal Conditioning</td><td class="cat-build">Electronics</td><td>Calibration, amplification</td></tr>
+          <tr><td class="no">005</td><td>Load Cells &amp; Signal Conditioning</td><td class="cat-code">Electronics</td><td>Calibration, amplification</td></tr>
           <tr><td class="no">006</td><td>Python</td><td class="cat-code">Software</td><td>Matplotlib, NumPy</td></tr>
           <tr><td class="no">007</td><td>Numerical Simulation</td><td class="cat-code">Software</td><td>Projectile &amp; orbital mechanics</td></tr>
-          <tr><td class="no">008</td><td>[Add your own]</td><td class="cat-build">—</td><td>—</td></tr>
         </tbody>
       </table>
     </div>
@@ -235,13 +237,11 @@
       <div>
         <h3>Let's talk.</h3>
         <p>Applying to study mechanical engineering and happy to walk through any of these projects in more detail — CAD files, raw test data, and source code are all available on request.</p>
-        <a href="mailto:you@example.com" class="btn primary">Send an email</a>
+        <a href="mailto:oliver.weedon1@icloud.com" class="btn primary">Send an email</a>
       </div>
       <div class="signoff-fields">
-        <div class="row"><span class="k">Email</span><a href="mailto:you@example.com">you@example.com</a></div>
-        <div class="row"><span class="k">GitHub</span><a href="https://github.com/yourusername">github.com/yourusername</a></div>
-        <div class="row"><span class="k">LinkedIn</span><a href="#">[optional]</a></div>
-        <div class="row"><span class="k">Location</span><span>United Kingdom</span></div>
+        <div class="row"><span class="k">Email</span><a href="mailto:oliver.weedon1@icloud.com">oliver.weedon1@icloud.com</a></div>
+        <div class="row"><span class="k">Location</span><span>Portsmouth, United Kingdom</span></div>
       </div>
     </div>
   </section>
@@ -250,7 +250,7 @@
 
 <footer>
   <div class="wrap">
-    <span>© 2026 Your Name — Built &amp; hosted on GitHub Pages</span>
+    <span>© 2026 Oliver Weedon — Built &amp; hosted on GitHub Pages</span>
     <span>Sheet 1/1 · Rev A</span>
   </div>
 </footer>

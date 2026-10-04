@@ -42,7 +42,7 @@
     <div class="page-meta-row">
       <div class="cell"><span class="k">Role</span><span class="v">Mechanical design, electronics, firmware, analysis</span></div>
       <div class="cell"><span class="k">Tools</span><span class="v">Arduino, load cell + amplifier, brushless motor/ESC</span></div>
-      <div class="cell"><span class="k">Duration</span><span class="v">[Add timeframe]</span></div>
+      <div class="cell"><span class="k">Duration</span><span class="v">3 weeks</span></div>
       <div class="cell"><span class="k">Status</span><span class="v">Complete, two variants</span></div>
     </div>
   </header>
@@ -50,47 +50,36 @@
   <section class="wrap detail-section">
     <div class="dim-divider"><span class="num">a</span><span class="label">Overview</span><span class="line"></span></div>
     <div class="prose">
-      <p>Motor datasheets give you a number; a test stand tells you the truth. The goal here was to build a rig rigid and sensitive enough to capture real thrust curves from small motors, rather than relying on manufacturer claims.</p>
-      <p>[Add 2–3 sentences on what prompted this project — a model aircraft or rocketry hobby, curiosity about ESC behaviour, wanting real data to compare motor options?]</p>
+        <p>I saw a video about toroidal propellers and was interested to experiment with their properties. As a result I have made a fully integrated propeller test rig which is able to measure the thrust of different propeller designs for a specific rpm.</p>
     </div>
   </section>
 
   <section class="wrap detail-section">
     <div class="dim-divider"><span class="num">b</span><span class="label">Mechanical Design</span><span class="line"></span></div>
     <div class="prose">
-      <p>The stand mounts the motor rigidly against a load cell so that thrust is transferred cleanly into the sensor rather than dissipated through flex in the mount. [Describe the mount geometry, how you constrained the motor to load only the sensitive axis of the load cell, and any 3D-printed jig design decisions — bolt patterns, motor mount standard, alignment features.]</p>
+        <p>I designed and 3D printed the motor mount myself, taking care to ensure the rigidity of the mount and that the thrust is transferred directly along the sensitive axis. The load cell was clamped onto the edge of a table using an F-clamp. To improve accuracy I could make an actual base to screw the load cell into, improving rigidity. I also designed a mount to test hobby rocket motors with a thicker wall to reduce melting in the mount and holes on the bottom for the exhaust. I haven’t been able to test it yet due to the risk of wild fires.</p>
     </div>
   </section>
 
   <section class="wrap detail-section">
     <div class="dim-divider"><span class="num">c</span><span class="label">Electronics &amp; Firmware</span><span class="line"></span></div>
     <div class="prose">
-      <p>[Describe the electronics chain: which load cell and amplifier (e.g. HX711), how you wired it to the Arduino, and how the firmware samples and streams data. Cover your calibration procedure — known reference weights, how you derived the counts-to-grams/Newtons conversion — and how you handled noise or vibration in the signal, e.g. software filtering or mechanical damping.]</p>
-      <ul>
-        <li>[Sample rate achieved and why that mattered for capturing the burn profile]</li>
-        <li>[Calibration method and accuracy achieved]</li>
-        <li>[Any filtering/smoothing applied to the raw signal]</li>
-      </ul>
+        <p>I used an arduino uno microcontroller to run the rig. It was connected to the HX711 load cell amplifier to get clear and accurate thrust data. It was also wired to an electronic speed controller and brushless motor to control the rpm of the motor. The microcontroller sends different input speeds and then records the thrust to create a graph. I am planning to add a microphone so that it can also measure thrust to noise as that is a key advantage of toroidal propellers.</p>
+      
     </div>
   </section>
 
   <section class="wrap detail-section">
     <div class="dim-divider"><span class="num">d</span><span class="label">Results</span><span class="line"></span></div>
     <div class="prose">
-      <p>Results were plotted as thrust-vs-time curves for both the propeller and rocket motor configurations. [Summarise what the curves showed — peak thrust, burn duration, how repeatable results were across runs, and how they compared with manufacturer specs if you had any to check against.]</p>
-    </div>
-    <div class="gallery-grid">
-      <div class="figure-placeholder"><span class="txt">[ Propeller motor thrust-vs-time graph ]</span></div>
-      <div class="figure-placeholder"><span class="txt">[ Rocket motor thrust-vs-time graph ]</span></div>
-      <div class="figure-placeholder"><span class="txt">[ Rig photo, propeller variant ]</span></div>
-      <div class="figure-placeholder"><span class="txt">[ Rig photo, rocket motor variant ]</span></div>
+        <p>Results were plotted as thrust vs input signal. I found that the toroidal propeller was more efficient however that may be because I found an optimised design for the toroidal propeller whereas the standard propeller was a less optimal design which I made myself.</p>
     </div>
   </section>
 
   <section class="wrap detail-section">
     <div class="dim-divider"><span class="num">e</span><span class="label">Reflection</span><span class="line"></span></div>
     <div class="prose">
-      <p>[What was the hardest engineering problem here — signal noise, mechanical rigidity, safety around the rocket motor variant? What would the next revision of the stand fix?]</p>
+        <p>One major challenge during this project was inaccurate load cell readings. Initially I thought this was due to electromagnetic fields disrupting the load cell and while this is possible the small size of the motor and the fact there are many fields of opposing polarity means the fields cancel out and the effect is very small. I realised that the problem was actually that my calibration method was very inaccurate. I learnt a lot about working through a problem systematically as well as of course how engineering systems are tested.</p>
     </div>
   </section>
 
@@ -99,23 +88,14 @@
     <table class="specs-table">
       <thead><tr><th>Parameter</th><th>Value</th></tr></thead>
       <tbody>
-        <tr><td class="k">Load cell range</td><td>[Add]</td></tr>
-        <tr><td class="k">Amplifier</td><td>[e.g. HX711]</td></tr>
-        <tr><td class="k">Sample rate</td><td>[Add]</td></tr>
-        <tr><td class="k">Peak thrust recorded</td><td>[Add]</td></tr>
-        <tr><td class="k">Measurement accuracy</td><td>[Add]</td></tr>
+        <tr><td class="k">Load cell range</td><td>0-50N</td></tr>
+        <tr><td class="k">Amplifier</td><td>HX711</td></tr>
+        <tr><td class="k">Peak thrust recorded</td><td>0.2N</td></tr>
+        <tr><td class="k">Measurement accuracy</td><td>Moderate</td></tr>
       </tbody>
     </table>
   </section>
 
-  <section class="wrap detail-section">
-    <div class="dim-divider"><span class="num">g</span><span class="label">Downloads</span><span class="line"></span></div>
-    <div class="downloads-row">
-      <a href="#">Test Data ↗</a>
-      <a href="#">Source Code ↗</a>
-      <a href="#">Rig Photos ↗</a>
-    </div>
-  </section>
 
   <nav class="wrap project-pager" aria-label="Project navigation">
     <a href="project-clock.html" class="prev">
